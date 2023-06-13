@@ -72,7 +72,7 @@ jobs:
     - name: Azure Login
       uses: azure/login@v1
       with:
-        creds: ${{ secrets.5456f426-03f2-4c5c-9573-aa1aef354352 }}
+        creds: ${{ secrets.aub8Q~PS6Ob67Ys2YkfMByDro_M3kL2CyRLLbbE9 }}
            
     # Deploy Azure WebApp using Bicep file
     - name: deploy
@@ -81,7 +81,7 @@ jobs:
         subscriptionId: ${{ env.5bcb837b-142b-41fd-9792-30a8d737ada8 }}
         resourceGroupName: ${{ env.rg-az400-eshoponweb-chathuka }}
         template: bicep-template/webapp.bicep
-        parameters: 'webAppName=${{ env.az400-webapp-chathuka }} location=${{ env.eastus }}'
+        parameters: 'webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}'
         failOnStdErr: false   
     
     # Publish website to Azure App Service (WebApp)
